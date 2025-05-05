@@ -4,13 +4,13 @@ A desktop application that converts natural language questions into SQL queries 
 
 ## Overview
 
-This Text-to-SQL Assistant uses a local LLM (Large Language Model) to translate natural language questions into SQL queries. It provides an intuitive interface to interact with a database without needing to write SQL code manually.
+This Text-to-SQL Assistant uses a local LLM to translate natural language questions into SQL queries. It provides an interface to interact with a database to non-technical users.
 
 ## Architecture
 
-The application follows a simple but effective architecture:
+The application architecture:
 
-1. **UI Layer** - Built with Tkinter, provides:
+1. **UI Layer** - Built with Tkinter:
    - Natural language query input
    - SQL query display
    - Query results display
@@ -30,12 +30,11 @@ The application follows a simple but effective architecture:
 
 ## Key Features
 
-- Interactive database schema visualization
 - Natural language to SQL translation
-- Automatic SQL execution
+- SQL execution
 - Result display in tabular format
 - Example queries to help users get started
-- Robust SQL extraction from LLM responses
+- SQL extraction from LLM responses
 - Common SQL issue correction
 - Threaded query processing to keep UI responsive
 
@@ -108,9 +107,3 @@ To use your own database instead of the sample one:
 1. Modify the `db_path` variable in the `__init__` method
 2. Remove the `create_sample_database` method call if you already have a database
 3. Adjust the schema display code if needed
-
-## Troubleshooting
-
-- **"Cannot connect to Ollama server"**: Make sure Ollama is running
-- **SQL Generation Errors**: Check if the sqlcoder:15b model is properly installed
-- **Execution Errors**: Check that your query doesn't reference tables or columns that don't exist
