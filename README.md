@@ -27,7 +27,6 @@ The application follows a simple but effective architecture:
    - Generates appropriate SQL code
    - Handles query parsing and SQL extraction
 
-4. **Execution Layer** - Executes generated SQL and formats results using pandas
 
 ## Key Features
 
@@ -52,8 +51,7 @@ Trade-offs
 1. This is the only model that was making sense. Other models was generated false SQL query and couldn't execute it.
 models tested: qwen3:14b, llama3:13b, llama3:8b, sqlcoder:7b, codellama:7b, mistral:7b-instruct
 
-
-3. Other System Trade-offs
+2. Other System Trade-offs
 Local LLM vs. API Services:
  
 Pro: Privacy, no API costs, works offline
